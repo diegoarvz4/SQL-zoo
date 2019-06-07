@@ -1,3 +1,4 @@
+/*ANSWERS FROM https://sqlzoo.net/wiki/SELECT_from_Nobel_Tutorial*/
 /*1. */
 SELECT yr, subject, winner
   FROM nobel

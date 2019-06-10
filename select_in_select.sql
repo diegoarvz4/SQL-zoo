@@ -36,3 +36,15 @@ SELECT continent, name, area FROM world x
     (SELECT area FROM world y
         WHERE y.continent=x.continent
           AND area>0)
+
+/*8. */
+SELECT DISTINCT continent,(SELECT name FROM world a WHERE a.continent = b.continent ORDER BY name LIMIT 1) 
+FROM world b;
+
+/*9. */
+SELECT name, continent, population FROM world x 
+WHERE 25000000 >= ALL (SELECT population FROM world y WHERE x.continent = y.continent)
+
+/*10. */
+SELECT name, continent FROM world x 
+WHERE population > ALL(SELECT population*3 FROM world y WHERE x.continent = y.continent AND x.name != y.name)

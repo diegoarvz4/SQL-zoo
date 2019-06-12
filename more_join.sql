@@ -1,4 +1,5 @@
 
+/* ANSWEROS FROM https://sqlzoo.net/wiki/More_JOIN_operations */ 
 /*1. */
 SELECT id, title
     FROM movie
